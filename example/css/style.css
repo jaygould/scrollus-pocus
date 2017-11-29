@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'alegreya';
+	src: url('alegreya-extra-bold.woff') format('woff'); /* Pretty Modern Browsers */
+}
+body {
+	font-family: helvetica;
+}
+#header {
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+.logo {
+	display: block;
+	text-align: center;
+	margin-top: 60px;
+	color: #fff;
+	font-size: 10em;
+	line-height: 130px;
+	will-change: transform;
+	font-family: 'alegreya';
+}
+.container {
+	height: 500px;
+	position: relative;
+}
+
+.container1 {
+	background: rgb(224, 211, 91);
+}
+.container2 {
+	background: rgb(63, 178, 214);
+}
+.container3 {
+	background: rgb(205, 116, 213);
+}
+.container4 {
+	background: rgb(110, 227, 139);
+}
+
+/*.scrollyWrap {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: hidden;
+}*/
+/*.dupElementWrap {
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+
+}*/
+/*.dupElementWrap .logo {
+	margin: auto;
+	padding: auto;
+}*/
+/*.dupElementInner {
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}*/
