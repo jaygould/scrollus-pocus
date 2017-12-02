@@ -46,32 +46,3 @@ body {
 .container4 {
 	background: #b37d4e;
 }
-
-/*.scrollyWrap {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	overflow: hidden;
-}*/
-/*.dupElementWrap {
-	position: absolute;
-	overflow: hidden;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-
-}*/
-/*.dupElementWrap .logo {
-	margin: auto;
-	padding: auto;
-}*/
-/*.dupElementInner {
-	position: absolute;
-	overflow: hidden;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-}*/

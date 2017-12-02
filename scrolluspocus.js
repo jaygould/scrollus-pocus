@@ -1,8 +1,3 @@
-//duplicate wraps exceed the height of the actual wraps, so as you scroll down the elements behind are still technically there but ust hidden
-
-//if text node, wrap text in a span and that will be better for getBoundingClientRect
-//if SVG...
-//if img...
 (function() {
 	'use strict';
 
