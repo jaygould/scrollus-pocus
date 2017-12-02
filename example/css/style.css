@@ -20,23 +20,31 @@ body {
 	line-height: 130px;
 	will-change: transform;
 	font-family: 'alegreya';
+	text-shadow: 0px 1px 2px #000;
 }
+.logosvg {
+	display: block;
+	margin-top: 60px;
+	width: 500px;
+	margin: 0 auto;
+}
+
 .container {
 	height: 500px;
 	position: relative;
 }
 
 .container1 {
-	background: rgb(224, 211, 91);
+	background: #286dab;
 }
 .container2 {
-	background: rgb(63, 178, 214);
+	background: #cd5360;
 }
 .container3 {
-	background: rgb(205, 116, 213);
+	background: #438496;
 }
 .container4 {
-	background: rgb(110, 227, 139);
+	background: #b37d4e;
 }
 
 /*.scrollyWrap {

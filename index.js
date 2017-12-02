@@ -10,7 +10,6 @@
 
 	function ScrollusPocus(mainElementConfig, targetPanesConfig) {
 		scr = this;
-
 		//constructor
 		scr.mainElementSelector = mainElementConfig;
 		scr.mainElementDetails = scr.getMainElementDetails();
@@ -74,15 +73,20 @@
 
 	ScrollusPocus.prototype.init = function() {
 		//get element type (text, image?)
+		//also need to style image based on type - i.e. if text it can be styled there, but if image, another image or a few may be needed
+		//also SVG...
 		_getMainElementType();
 
 		//get main element position (text, svg, image inners) both inner and actual
-		scr.mainElementInnerRangePos = _getMainInnerElementRange();
-		scr.mainElementPos = _getMainInnerElement();
+		if (scr.mainElementType == 'text') {
+			scr.mainElementInnerRangePos = _getMainInnerElementRange();
+		}
+		scr.mainElementPos = _getMainElement();
 
 		scr.duplicateElement();
 		_applyStyleDuplicatePanes();
 		_applyPosition();
+
 		_scrollListener();
 		_resizeListener();
 
@@ -133,12 +137,16 @@
 	}
 
 	function _applyPosition() {
-		var translateYMainElement = scr.mainElementPos.y;
-		var translateXMainElement = scr.mainElementInnerRangePos.x;
-		console.log(window.innerWidth);
-		setTimeout(function() {
-			console.log(window.innerWidth);
-		}, 100);
+		var translateYMainElement;
+		var translateXMainElement;
+
+		if (scr.mainElementType == 'text') {
+			translateYMainElement = scr.mainElementPos.y;
+			translateXMainElement = scr.mainElementInnerRangePos.x;
+		} else if (scr.mainElementType == 'img') {
+			translateYMainElement = scr.mainElementPos.y;
+			translateXMainElement = scr.mainElementPos.x;
+		}
 		scr.targetPanes.forEach(function(e) {
 			var translateYTargetPane = e.domEl[0].getBoundingClientRect().y;
 			scr.dupElementWraps.forEach(function(eInner) {
@@ -157,7 +165,7 @@
 						).style.transform = `translateY(-${translateYTargetPane}px)`);
 
 					eInner.querySelector(
-						'.logo'
+						scr.mainElementSelector
 					).style.transform = `translateY(${translateYMainElement}px) translateX(${translateXMainElement}px)`;
 				}
 			});
@@ -179,15 +187,12 @@
 
 	function _getMainInnerElementRange() {
 		var innerElement = scr.mainElementDetails.childNodes[0];
-
 		var range = document.createRange();
 		range.selectNode(innerElement);
-		console.log('inner', range.getBoundingClientRect());
-		console.log('actual', scr.mainElementDetails.getBoundingClientRect());
 		return range.getBoundingClientRect();
 	}
 
-	function _getMainInnerElement() {
+	function _getMainElement() {
 		return scr.mainElementDetails.getBoundingClientRect();
 	}
 
