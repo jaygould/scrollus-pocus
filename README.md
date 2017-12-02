@@ -19,22 +19,22 @@ Pick which element you would like to have the effect (usually website/app logo o
 ```javascript
 <script>
 var panes = [
-	{
-		element: '.container1',
-		color: '#ffffff'
-	},
-	{
-		element: '.container2',
-		color: '#286dab'
-	},
-	{
-		element: '.container3',
-		color: '#cd5360'
-	},
-	{
-		element: '.container4',
-		color: '#b37d4e'
-	}
+  {
+    element: '.container1',
+    color: '#ffffff'
+  },
+  {
+    element: '.container2',
+    color: '#286dab'
+  },
+  {
+    element: '.container3',
+    color: '#cd5360'
+  },
+  {
+    element: '.container4',
+    color: '#b37d4e'
+  }
 ];
 </script>
 ```
