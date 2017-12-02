@@ -19,7 +19,9 @@
 		scr.scrollywrap;
 		scr.dupElementWraps = [];
 
-		scr.init();
+		if (document.querySelector(scr.mainElementSelector) !== null) {
+			scr.init();
+		}
 	}
 
 	ScrollusPocus.prototype.getMainElementDetails = function() {

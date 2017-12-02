@@ -50,3 +50,4 @@ var scrolly = new ScrollusPocus('.logo', panes);
 
 * The target element must have a fixed position
 * The effect will only work with text nodes currently (SVG and image support coming soon)
+* Older browsers (pre IE10) are not supported
