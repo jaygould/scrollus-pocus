@@ -43,8 +43,11 @@ Call the ScrollusPocus class and pass in the target element class, and the panes
 
 ```javascript
 var scrolly = new ScrollusPocus('.logo', panes);
-```
 
+<div id="header">
+  <p class="logo">Scrollus Pocus</p>
+</div>
+```
 
 ## Some considerations
 
